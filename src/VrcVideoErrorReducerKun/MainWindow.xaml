@@ -1,0 +1,57 @@
+<Window x:Class="VrcVideoErrorReducerKun.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="560"
+        SizeToContent="Height"
+        MinWidth="480"
+        MinHeight="240"
+        ResizeMode="CanMinimize"
+        Background="#F7F7F8"
+        FontFamily="Meiryo UI">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="VRChatに同梱されている yt-dlp のIPv6通信を、Windows Firewallでブロックします。"
+                   FontSize="14"
+                   Foreground="#24292F"
+                   TextWrapping="Wrap" />
+
+        <StackPanel Grid.Row="1"
+                    Margin="0,26,0,0">
+            <TextBlock Text="状態"
+                       FontWeight="Bold"
+                       Foreground="#24292F" />
+            <TextBlock x:Name="StatusText"
+                       Margin="0,8,0,0"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Text="確認中" />
+            <TextBlock x:Name="MessageText"
+                       Margin="0,8,0,0"
+                       Foreground="#59636E"
+                       TextWrapping="Wrap" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                    Margin="0,22,0,0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button x:Name="EnableButton"
+                    Content="設定を有効にする"
+                    Width="148"
+                    Height="36"
+                    Margin="0,0,10,0"
+                    Click="EnableButton_Click" />
+            <Button x:Name="DisableButton"
+                    Content="設定を削除する"
+                    Width="132"
+                    Height="36"
+                    Click="DisableButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
